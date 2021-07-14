@@ -1,5 +1,6 @@
 package io.robbinespu;
 
+import io.robbinespu.datastructure.Question;
 import io.robbinespu.hashing.QuadraticProbing;
 import io.robbinespu.hashing.TableFullException;
 
@@ -13,7 +14,14 @@ public class App {
     public static void main( String[] args ) throws TableFullException {
         //System.out.println( "Hello World!" );
 
-
+        // Create questionnaire
+        String question = "Siapa nak berhenti?";
+        int choiceNum = 1;
+        String choiceStr = "";
+        Question questionModel = new Question(Constants.MULTI_CHOOSE_QUESTION, question, choiceStr, choiceNum);
+        System.out.println(questionModel.toString());
+        // Add answers
+        // Add respondent
 
         QuadraticProbing hashQuadratic = new QuadraticProbing(TABLE_SZ);
 
