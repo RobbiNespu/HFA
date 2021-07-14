@@ -1,4 +1,4 @@
-package io.robbinespu;
+package io.robbinespu.hashing;
 
 import java.util.Arrays;
 
