@@ -4,14 +4,14 @@ package io.robbinespu;
  * Hello world!
  *
  */
-public class App 
-{
-    public static void main( String[] args ){
+public class App {
+    private static final int TABLE_SZ = 101; // a prime number
+
+    public static void main( String[] args ) throws Exception{
         System.out.println( "Hello World!" );
 
-        if (args.length < 1) {
-            System.err.println("Please provide an input!");
-            System.exit(0);
-        }
+        QuadraticProbing hashQuadratic = new QuadraticProbing(TABLE_SZ);
+
+        System.out.println(hashQuadratic.toString());
     }
 }
