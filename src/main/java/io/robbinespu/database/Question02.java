@@ -10,24 +10,59 @@ import java.util.ArrayList;
 import java.util.LinkedHashMap;
 
 public class Question02 {
-    public Question02() {
-        ArrayList<Questionare> questionareArrayList =new ArrayList<>();
-        Questionare q1 = new Questionare();
-        LinkedHashMap<String,String> mcq1 = new LinkedHashMap<>();
+    ArrayList<Questionare> questionareArrayList =new ArrayList<>();
+    Questionare q1 = new Questionare();
+    LinkedHashMap<String,String> mcq1 = new LinkedHashMap<>();
+    ArrayList<RespondentOptions> respondentOptionsArrayList = new ArrayList<>();
+    Respondent r1=new Respondent();
 
-        q1.setQuestionString("What is your age?");
+    public ArrayList<Questionare> getQuestionareArrayList() {
+        return questionareArrayList;
+    }
+
+    public void setQuestionareArrayList(ArrayList<Questionare> questionareArrayList) {
+        this.questionareArrayList = questionareArrayList;
+    }
+
+    public Questionare getQ1() {
+        return q1;
+    }
+
+    public void setQ1(Questionare q1) {
+        this.q1 = q1;
+    }
+
+    public LinkedHashMap<String, String> getMcq1() {
+        return mcq1;
+    }
+
+    public void setMcq1(LinkedHashMap<String, String> mcq1) {
+        this.mcq1 = mcq1;
+    }
+
+    public ArrayList<RespondentOptions> getRespondentOptionsArrayList() {
+        return respondentOptionsArrayList;
+    }
+
+    public void setRespondentOptionsArrayList(ArrayList<RespondentOptions> respondentOptionsArrayList) {
+        this.respondentOptionsArrayList = respondentOptionsArrayList;
+    }
+
+    public Respondent getR1() {
+        return r1;
+    }
+
+    public void setR1(Respondent r1) {
+        this.r1 = r1;
+    }
+
+    public Question02() {
+
+        q1.setQuestionString("What is your gender?");
         q1.setQuestionType(Constants.SINGLE_CHOOSE_QUESTION);
 
-        mcq1.put("A","Under 18");
-        mcq1.put("B","18 - 24 years");
-        mcq1.put("C","25 - 29 years");
-        mcq1.put("D","30 - 34 years");
-        mcq1.put("E","35 - 39 years");
-        mcq1.put("F","40 - 44 years");
-        mcq1.put("G","45 - 49 years");
-        mcq1.put("H","50 - 54 years");
-        mcq1.put("I","55 - 59 years");
-        mcq1.put("J","60 years and above");
+        mcq1.put("A","Male");
+        mcq1.put("B","Female");
 
         QuestionareOptions qo1 = new QuestionareOptions(mcq1);
         q1.setQuestionareOptions(qo1);
@@ -35,13 +70,12 @@ public class Question02 {
         questionareArrayList.add(q1); // Add all questions here
 
         // Add respondent
-        ArrayList<RespondentOptions> respondentOptionsArrayList = new ArrayList<>(); // Add all responded here
         RespondentOptions q1r1 = new RespondentOptions();
-        q1r1.setText("A");
-        respondentOptionsArrayList.add(q1r1);
+        q1r1.setText("A"); //<------------ responded answers
+        respondentOptionsArrayList.add(q1r1); // Add all responded here
 
-        Respondent r1=new Respondent("5/28/2021 14:18:22",questionareArrayList, respondentOptionsArrayList);
-
-        System.out.println(r1);
+        r1.setTimeStamp("5/28/2021 14:18:22");
+        r1.setQuestions(questionareArrayList);
+        r1.setRespondentOptions(respondentOptionsArrayList);
     }
 }

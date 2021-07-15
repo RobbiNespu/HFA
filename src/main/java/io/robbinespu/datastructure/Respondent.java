@@ -10,6 +10,10 @@ public class Respondent {
     ArrayList<Questionare> questions = new ArrayList<>();
     ArrayList<RespondentOptions> respondentOptions = new ArrayList<>();
 
+    public Respondent() {
+
+    }
+
     public String getTimeStamp() {
         return timeStamp;
     }
@@ -51,7 +55,8 @@ public class Respondent {
 
     @Override
     public String toString() {
-        return "\nRespondent{ " +
+        return "\n-------------------------------------------------" +
+                "\nRespondent{ " +
                 "\ntimeStamp=" + getTimeStamp() +
                 ",\n question="+getQuestions() +
                 ",\n " + respondentOptions.toString() +
