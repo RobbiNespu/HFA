@@ -3,87 +3,50 @@ package io.robbinespu.database;
 import io.robbinespu.Constants;
 import io.robbinespu.datastructure.Questionare;
 import io.robbinespu.datastructure.QuestionareOptions;
-import io.robbinespu.datastructure.Respondent;
-import io.robbinespu.datastructure.RespondentOptions;
 
-import java.util.ArrayList;
 import java.util.LinkedHashMap;
 
 public class Question01 {
-    ArrayList<Questionare> questionareArrayList =new ArrayList<>();
-    Questionare q1 = new Questionare();
-    LinkedHashMap<String,String> mcq1 = new LinkedHashMap<>();
-    ArrayList<RespondentOptions> respondentOptionsArrayList = new ArrayList<>();
-    Respondent r1=new Respondent();
 
-    public ArrayList<Questionare> getQuestionareArrayList() {
-        return questionareArrayList;
+    Questionare question = new Questionare();
+    LinkedHashMap<String,String> questionOptionTypeMCQ = new LinkedHashMap<>();
+
+    public Questionare getQuestion() {
+        return question;
     }
 
-    public void setQuestionareArrayList(ArrayList<Questionare> questionareArrayList) {
-        this.questionareArrayList = questionareArrayList;
+    public void setQuestion(Questionare question) {
+        this.question = question;
     }
 
-    public Questionare getQ1() {
-        return q1;
+    public LinkedHashMap<String, String> getQuestionOptionTypeMCQ() {
+        return questionOptionTypeMCQ;
     }
 
-    public void setQ1(Questionare q1) {
-        this.q1 = q1;
+    public void setQuestionOptionTypeMCQ(LinkedHashMap<String, String> questionOptionTypeMCQ) {
+        this.questionOptionTypeMCQ = questionOptionTypeMCQ;
     }
 
-    public LinkedHashMap<String, String> getMcq1() {
-        return mcq1;
-    }
 
-    public void setMcq1(LinkedHashMap<String, String> mcq1) {
-        this.mcq1 = mcq1;
-    }
-
-    public ArrayList<RespondentOptions> getRespondentOptionsArrayList() {
-        return respondentOptionsArrayList;
-    }
-
-    public void setRespondentOptionsArrayList(ArrayList<RespondentOptions> respondentOptionsArrayList) {
-        this.respondentOptionsArrayList = respondentOptionsArrayList;
-    }
-
-    public Respondent getR1() {
-        return r1;
-    }
-
-    public void setR1(Respondent r1) {
-        this.r1 = r1;
-    }
 
     public Question01() {
 
-        q1.setQuestionString("What is your age?");
-        q1.setQuestionType(Constants.SINGLE_CHOOSE_QUESTION);
+        question.setQuestionString("What is your age?");
+        question.setQuestionType(Constants.SINGLE_CHOOSE_QUESTION);
 
-        mcq1.put("A","Under 18");
-        mcq1.put("B","18 - 24 years");
-        mcq1.put("C","25 - 29 years");
-        mcq1.put("D","30 - 34 years");
-        mcq1.put("E","35 - 39 years");
-        mcq1.put("F","40 - 44 years");
-        mcq1.put("G","45 - 49 years");
-        mcq1.put("H","50 - 54 years");
-        mcq1.put("I","55 - 59 years");
-        mcq1.put("J","60 years and above");
+        questionOptionTypeMCQ.put("A","Under 18");
+        questionOptionTypeMCQ.put("B","18 - 24 years");
+        questionOptionTypeMCQ.put("C","25 - 29 years");
+        questionOptionTypeMCQ.put("D","30 - 34 years");
+        questionOptionTypeMCQ.put("E","35 - 39 years");
+        questionOptionTypeMCQ.put("F","40 - 44 years");
+        questionOptionTypeMCQ.put("G","45 - 49 years");
+        questionOptionTypeMCQ.put("H","50 - 54 years");
+        questionOptionTypeMCQ.put("I","55 - 59 years");
+        questionOptionTypeMCQ.put("J","60 years and above");
 
-        QuestionareOptions qo1 = new QuestionareOptions(mcq1);
-        q1.setQuestionareOptions(qo1);
+        QuestionareOptions qo1 = new QuestionareOptions(questionOptionTypeMCQ);
+        question.setQuestionareOptions(qo1);
 
-        questionareArrayList.add(q1); // Add all questions here
-
-        // Add respondent
-        RespondentOptions q1r1 = new RespondentOptions();
-        q1r1.setText("A"); //<------------ responded answers
-        respondentOptionsArrayList.add(q1r1); // Add all responded here
-
-        r1.setTimeStamp("5/28/2021 14:18:22");
-        r1.setQuestions(questionareArrayList);
-        r1.setRespondentOptions(respondentOptionsArrayList);
     }
 }
