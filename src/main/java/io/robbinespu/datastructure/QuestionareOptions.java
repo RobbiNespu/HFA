@@ -47,8 +47,8 @@ public class QuestionareOptions {
     public String toString(){
     return "QuestionOption{ " +
                "\n   fillInTheBlank=" + getFillInTheBlank()+
-               ",\n  trueFalse="+getTf() +
-               ",\n  mcq=" + getMcq() +
+               ",\n   trueFalse="+getTf() +
+               ",\n   mcq=" + getMcq() +
                "\n  }";
     }
 }
