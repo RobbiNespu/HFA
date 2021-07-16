@@ -63,23 +63,24 @@ public class HashTableRandom {
     }
 
     void remove(int key) throws Exception {
-        int j = 0;
-        int hashValue = hashAlgorithm.hash(key);
-        do {
-            int addr = (hashValue - probingAlgorithm.probe(key, j));
-            if (hashArray.isFree(addr)) {
+        // should not random prob if to delete, so we itterate the hash!
+        int[] arr = hashArray.toArray();
+        int addr = 0;
+        debug(Arrays.toString(arr));
+        for (int i = 0; i < Constants.TABLE_SZ; i++) {
+            if(arr[i] == key){
+                addr = i;
+                System.out.println("Found on index="+arr[i]);
                 break;
             }
-            if (hashArray.compareKeys(addr, key)) {
-                hashArray.markAsDeleted(addr);
-                debug(String.format(sMsgKeyMarkedAsDeleted, key, addr));
-                return;
-            }
-            j++;
-            debug(String.format(sMsgCollision, j, addr, this.hashArray.get(addr)));
-        } while (j < size);
-        throw new Exception(String.format(sExceptionKeyNotFound, key));
-
+        }
+        if (hashArray.compareKeys(addr, key)) {
+            hashArray.markAsDeleted(addr);
+            debug(String.format(sMsgKeyMarkedAsDeleted, key, addr));
+        }
+        if (hashArray.compareKeys(addr, key)) {
+            throw new Exception(String.format(sExceptionKeyNotFound, key));
+        }
     }
     int binarySearch(int arr[], int x) // cannot use because data is unsorted
     {
