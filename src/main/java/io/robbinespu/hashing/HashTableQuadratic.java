@@ -1,6 +1,9 @@
-package io.robbinespu.tables;
+package io.robbinespu.hashing;
 
-public class CustomHashTableQuadratic {
+import io.robbinespu.math.CustomMath;
+import io.robbinespu.tables.HashArray;
+
+public class HashTableQuadratic {
 /* Todo:
     answers are duplicate, maybe it have same index?
     for example eg: {q1,r1} = {y} and {q1,r2} = {y} , which mean the both answered Y on Question 1
@@ -26,7 +29,9 @@ public class CustomHashTableQuadratic {
         return hashArray;
     }
 
-    public CustomHashTableQuadratic(int size, IHash hashAlgorithm, IProbing probingAlgorithm) {
+    public static CustomMath customMath = new CustomMath();
+
+    public HashTableQuadratic(int size, IHash hashAlgorithm, IProbing probingAlgorithm) {
         super();
         this.size = size;
         this.hashAlgorithm = hashAlgorithm;
@@ -104,15 +109,9 @@ public class CustomHashTableQuadratic {
     }
 
     private int calculateIndex(int hashValue, int key, int j) {
-        // cant use math.floormod, jdk issues
         int x = hashValue - probingAlgorithm.probe(key, j);
         int y = size;
-        int mod = x % y;
-        // if the signs are different and modulo not zero, adjust result
-        if ((mod ^ y) < 0 && mod != 0) {
-            mod += y;
-        }
-        return mod;
+        return customMath.FloorMod(x,y);
     }
 
     private boolean debug = false;
