@@ -4,7 +4,7 @@ import java.util.Arrays;
 
 public class SurveyQuestions {
     String questionString ;
-    int questionType;
+    int questionType; // take value from Constants.java
     String[] surveyQuestionsOptions;
 
     //constructor
