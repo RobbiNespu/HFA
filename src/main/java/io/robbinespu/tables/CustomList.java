@@ -60,21 +60,21 @@ public class CustomList {
         SurveyQuestion02Answers09 SurveyQuestion02Answers09 = new SurveyQuestion02Answers09();
         SurveyQuestion02Answers10 SurveyQuestion02Answers10 = new SurveyQuestion02Answers10();
 
-        SurveyQuestions03 surveyQuestions03 = new SurveyQuestions03();
+        SurveyQuestions03 surveyQuestions03 = new SurveyQuestions03(); // Todo : Add answers
 
-        SurveyQuestions04 surveyQuestions04 = new SurveyQuestions04();
+        SurveyQuestions04 surveyQuestions04 = new SurveyQuestions04(); // Todo : Add answers
 
-        SurveyQuestions05 surveyQuestions05 = new SurveyQuestions05();
+        SurveyQuestions05 surveyQuestions05 = new SurveyQuestions05(); // Todo : Add answers
 
-        SurveyQuestions06 surveyQuestions06 = new SurveyQuestions06();
+        SurveyQuestions06 surveyQuestions06 = new SurveyQuestions06(); // Todo : Add answers
 
-        SurveyQuestions07 surveyQuestions07 = new SurveyQuestions07();
+        SurveyQuestions07 surveyQuestions07 = new SurveyQuestions07(); // Todo : Add answers
 
-        SurveyQuestions08 surveyQuestions08 = new SurveyQuestions08();
+        SurveyQuestions08 surveyQuestions08 = new SurveyQuestions08(); // Todo : Add answers
 
-        SurveyQuestions09 surveyQuestions09 = new SurveyQuestions09();
+        SurveyQuestions09 surveyQuestions09 = new SurveyQuestions09(); // Todo : Add answers
 
-        SurveyQuestions10 surveyQuestions10 = new SurveyQuestions10();
+        SurveyQuestions10 surveyQuestions10 = new SurveyQuestions10(); // Todo : Add answers
 
 
         // Note: Add all instantiated just 1 question and 100 answers from database
@@ -108,35 +108,35 @@ public class CustomList {
 
         ArrayList<SurveyQuestions> surveyQuestionsArrayList03 = new ArrayList<>();
         ArrayList<SurveyAnswers> surveyAnswersArrayList03 = new ArrayList<>();
-        surveyQuestionsArrayList03.add(surveyQuestions03.questions); // <-- only one!
+        surveyQuestionsArrayList03.add(surveyQuestions03.questions); // <-- only one! // Todo : Add answers
 
         ArrayList<SurveyQuestions> surveyQuestionsArrayList04 = new ArrayList<>();
         ArrayList<SurveyAnswers> surveyAnswersArrayList04 = new ArrayList<>();
-        surveyQuestionsArrayList04.add(surveyQuestions04.questions); // <-- only one!
+        surveyQuestionsArrayList04.add(surveyQuestions04.questions); // <-- only one! // Todo : Add answers
 
         ArrayList<SurveyQuestions> surveyQuestionsArrayList05 = new ArrayList<>();
         ArrayList<SurveyAnswers> surveyAnswersArrayList05 = new ArrayList<>();
-        surveyQuestionsArrayList05.add(surveyQuestions05.questions); // <-- only one!
+        surveyQuestionsArrayList05.add(surveyQuestions05.questions); // <-- only one! // Todo : Add answers
 
         ArrayList<SurveyQuestions> surveyQuestionsArrayList06 = new ArrayList<>();
         ArrayList<SurveyAnswers> surveyAnswersArrayList06 = new ArrayList<>();
-        surveyQuestionsArrayList06.add(surveyQuestions06.questions); // <-- only one!
+        surveyQuestionsArrayList06.add(surveyQuestions06.questions); // <-- only one! // Todo : Add answers
 
         ArrayList<SurveyQuestions> surveyQuestionsArrayList07 = new ArrayList<>();
         ArrayList<SurveyAnswers> surveyAnswersArrayList07 = new ArrayList<>();
-        surveyQuestionsArrayList07.add(surveyQuestions07.questions); // <-- only one!
+        surveyQuestionsArrayList07.add(surveyQuestions07.questions); // <-- only one! // Todo : Add answers
 
         ArrayList<SurveyQuestions> surveyQuestionsArrayList08 = new ArrayList<>();
         ArrayList<SurveyAnswers> surveyAnswersArrayList08 = new ArrayList<>();
-        surveyQuestionsArrayList08.add(surveyQuestions08.questions); // <-- only one!
+        surveyQuestionsArrayList08.add(surveyQuestions08.questions); // <-- only one! // Todo : Add answers
 
         ArrayList<SurveyQuestions> surveyQuestionsArrayList09 = new ArrayList<>();
         ArrayList<SurveyAnswers> surveyAnswersArrayList09 = new ArrayList<>();
-        surveyQuestionsArrayList09.add(surveyQuestions09.questions); // <-- only one!
+        surveyQuestionsArrayList09.add(surveyQuestions09.questions); // <-- only one! // Todo : Add answers
 
         ArrayList<SurveyQuestions> surveyQuestionsArrayList10 = new ArrayList<>();
         ArrayList<SurveyAnswers> surveyAnswersArrayList10 = new ArrayList<>();
-        surveyQuestionsArrayList10.add(surveyQuestions10.questions); // <-- only one!
+        surveyQuestionsArrayList10.add(surveyQuestions10.questions); // <-- only one! // Todo : Add answers
 
         // Note: add all survey responder fo S1..10 only
         s1.setSurveyQuestionsArrayList(surveyQuestionsArrayList01);
