@@ -3,7 +3,7 @@ package io.robbinespu.hashing;
 import io.robbinespu.math.CustomMath;
 import io.robbinespu.tables.HashArray;
 
-public class HashTableQuadratic {
+public class HashTableRandom {
 /* Todo:
     answers are duplicate, maybe it have same index?
     for example eg: {q1,r1} = {y} and {q1,r2} = {y} , which mean the both answered Y on Question 1
@@ -31,7 +31,7 @@ public class HashTableQuadratic {
 
     public static CustomMath customMath = new CustomMath();
 
-    public HashTableQuadratic(int size, IHash hashAlgorithm, IProbing probingAlgorithm) {
+    public HashTableRandom(int size, IHash hashAlgorithm, IProbing probingAlgorithm) {
         super();
         this.size = size;
         this.hashAlgorithm = hashAlgorithm;
@@ -84,7 +84,6 @@ public class HashTableQuadratic {
         int hashValue = hashAlgorithm.hash(key);
         do {
             int addr = calculateIndex(hashValue, key, j);
-            System.out.println("DEBUG searching "+key+" with hash value "+hashValue+ " on addr "+addr);
             if (hashArray.isFree(addr)) {
                 break;
             }

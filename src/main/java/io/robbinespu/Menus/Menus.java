@@ -1,8 +1,7 @@
 package io.robbinespu.Menus;
 
-import io.robbinespu.App;
 import io.robbinespu.Console;
-import io.robbinespu.hashing.Hash;
+import io.robbinespu.hashing.HashQuadratic;
 import io.robbinespu.hashing.QuadraticProbing;
 import io.robbinespu.hashing.HashTableQuadratic;
 
@@ -23,10 +22,10 @@ public class Menus {
         switch ( hashTable ){
             case "Quadratic":
                 int m = 10;
-                HashTableQuadratic table = new HashTableQuadratic(m, new Hash(m), new QuadraticProbing());
+                HashTableQuadratic table = new HashTableQuadratic(m, new HashQuadratic(m), new QuadraticProbing());
                 MenuQuadratic.choice(table);
                 break;
-            case "two":
+            case "Random":
                 System.out.println("two");
                 break;
             default:
@@ -46,8 +45,11 @@ public class Menus {
             choice = Console.readIntFromStdin("Please enter a number for an option: ");
             switch (choice) {
                 case 1:
-                    // TODO: do something
                     Menus.selectHash("Quadratic");
+                    break;
+                case 2:
+                    // TODO: do something
+                    Menus.selectHash("Random");
                     break;
                 case 4:
                     break;
