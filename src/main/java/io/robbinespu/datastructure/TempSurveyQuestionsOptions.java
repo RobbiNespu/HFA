@@ -2,7 +2,7 @@ package io.robbinespu.datastructure;
 
 import java.util.LinkedHashMap;
 
-public class QuestionareOptions {
+public class TempSurveyQuestionsOptions {
     LinkedHashMap<String,String> mcq = new LinkedHashMap<>();
     Boolean tf;
     String fillInTheBlank;
@@ -31,15 +31,15 @@ public class QuestionareOptions {
         this.fillInTheBlank = fillInTheBlank;
     }
 
-    public QuestionareOptions(LinkedHashMap<String,String> mcq) {
+    public TempSurveyQuestionsOptions(LinkedHashMap<String,String> mcq) {
         this.mcq = mcq;
     }
 
-    public QuestionareOptions(Boolean tf) {
+    public TempSurveyQuestionsOptions(Boolean tf) {
         this.tf = tf;
     }
 
-    public QuestionareOptions(String fillInTheBlank) {
+    public TempSurveyQuestionsOptions(String fillInTheBlank) {
         this.fillInTheBlank = fillInTheBlank;
     }
 
