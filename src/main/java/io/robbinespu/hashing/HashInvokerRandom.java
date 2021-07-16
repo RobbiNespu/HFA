@@ -27,6 +27,7 @@ public class HashInvokerRandom {
     }
 
     static public void search(HashTableRandom table, int key) {
+        print(table.toString());
         try {
             print(String.format(sMsgSearchForKey, key));
             print(String.format(sMsgSearchKeyFound, table.search(key)));
@@ -52,6 +53,7 @@ public class HashInvokerRandom {
 
     static public void getValue(HashTableRandom table, int idx) {
         HashArray array = table.getHashArray();
+        print(table.toString());
         if (idx > array.getSize() || idx < 0) {
             print(sMsgIndexIsOutOfBounds);
         } else if (array.isFree(idx) || array.isMarkedAsDeleted(idx)) {

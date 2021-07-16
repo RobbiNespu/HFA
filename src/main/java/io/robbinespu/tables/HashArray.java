@@ -1,5 +1,9 @@
 package io.robbinespu.tables;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
 public class HashArray {
     private int size;
 
@@ -68,5 +72,23 @@ public class HashArray {
         }
         builder.append("]");
         return builder.toString();
+    }
+
+    public int[] toArray(){
+        String temp;
+        StringBuilder builder = new StringBuilder();
+        for (Item item : hashArray) {
+            if (item == null) {
+                builder.append("0,");
+            } else {
+                builder.append(item.markAsDeleted ? "0," : item.key + ",");
+            }
+        }
+        temp = builder.toString();
+        List<String> list = Arrays.asList(temp.split(","));
+
+        int[] array = new int[list.size()];
+        for(int i = 0; i < list.size(); i++) array[i] = Integer.parseInt(list.get(i));
+        return array;
     }
 }

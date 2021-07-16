@@ -1,7 +1,10 @@
 package io.robbinespu.hashing;
 
+import io.robbinespu.Constants;
 import io.robbinespu.math.CustomMath;
 import io.robbinespu.tables.HashArray;
+
+import java.util.Arrays;
 
 public class HashTableRandom {
 /* Todo:
@@ -78,27 +81,49 @@ public class HashTableRandom {
         throw new Exception(String.format(sExceptionKeyNotFound, key));
 
     }
+    int binarySearch(int arr[], int x) // cannot use because data is unsorted
+    {
+        System.out.println("DEBUG arr[m].lenght ="+arr.length);
+        int l = 0, r = arr.length - 1;
+        while (l <= r) {
+            int m = l + (r - l) / 2;
+            // Check if x is present at mid
+            if (arr[m] == x)
+                return m;
+
+            // If x greater, ignore left half
+            if (arr[m] < x)
+                l = m + 1;
+
+                // If x is smaller, ignore right half
+            else
+                r = m - 1;
+        }
+
+        // if we reach here, then element was
+        // not present
+        return -1;
+    }
+
 
     int search(int key) throws Exception {
-        int j = 0;
-        int hashValue = hashAlgorithm.hash(key);
-        do {
-            int addr = calculateIndex(hashValue, key, j);
-            if (hashArray.isFree(addr)) {
-                break;
-            }
-            if (hashArray.compareKeys(addr, key)) {
-                return hashArray.get(addr);
-            }
-            j++;
-            debug(String.format(sMsgCollision, j, addr, this.hashArray.get(addr)));
-        } while (j < size);
-        throw new Exception(String.format(sExceptionKeyNotFound, key));
+        // binary search
+        int[] arr = hashArray.toArray();
+        int n = arr.length;
+        Arrays.sort(arr);
+        System.out.println("Sorted array = "+Arrays.toString(arr));
+        // start
+        int result = binarySearch(arr, key);
+        if (result == -1) {
+            throw new Exception(String.format(sExceptionKeyNotFound, key));
+        }else {
+            System.out.println("Element found on hash table " + result + "(sorted by binary search)");
+            return arr[result];
+        }
     }
 
     void clear() {
         this.hashArray.clear();
-
     }
 
     @Override

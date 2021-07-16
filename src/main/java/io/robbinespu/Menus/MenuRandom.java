@@ -11,7 +11,7 @@ public class MenuRandom {
         System.out.println();
         System.out.println("1.Loads QUESTIONARE to hash table");
         System.out.println("2.Open specific QUESTIONARE from hash table (input: index based )");
-        System.out.println("3.Search for a number in hash table");
+        System.out.println("3.Search for a number in hash table (Binary search)");
         System.out.println("4.Delete a QUESTIONARE from hash table");
         System.out.println("5.Clear the hash table");
         System.out.println("6.Sort students by matriculation number");
