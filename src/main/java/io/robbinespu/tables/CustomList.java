@@ -1,8 +1,9 @@
 package io.robbinespu.tables;
 
-import io.robbinespu.database.SurveyAnswers01;
-import io.robbinespu.database.SurveyAnswers02;
-import io.robbinespu.database.SurveyQuestions01;
+import io.robbinespu.database.q01.*;
+import io.robbinespu.database.q01.r01.*;
+import io.robbinespu.database.q02.SurveyQuestions02;
+import io.robbinespu.database.q02.r01.*;
 import io.robbinespu.datastructure.Survey;
 import io.robbinespu.datastructure.SurveyAnswers;
 import io.robbinespu.datastructure.SurveyQuestions;
@@ -29,31 +30,71 @@ public class CustomList {
         ArrayList<SurveyQuestions> surveyQuestionsArrayList = new ArrayList<>();
         ArrayList<SurveyAnswers> surveyAnswersArrayList = new ArrayList<>();
 
-        // Create just 1 question and 100 answers inside DATABASE
+        // Note: Create just 1 question and 100 answers inside DATABASE
         SurveyQuestions01 surveyQuestions01 = new SurveyQuestions01();
-        SurveyAnswers01 surveyAnswers01 = new SurveyAnswers01();
-        SurveyAnswers02 surveyAnswers02 = new SurveyAnswers02();
+        SurveyQuestion01Answers01 surveyQuestion01Answers01 = new SurveyQuestion01Answers01();
+        SurveyQuestion01Answers02 surveyQuestion01Answers02 = new SurveyQuestion01Answers02();
+        SurveyQuestion01Answers03 surveyQuestion01Answers03 = new SurveyQuestion01Answers03();
+        SurveyQuestion01Answers04 surveyQuestion01Answers04 = new SurveyQuestion01Answers04();
+        SurveyQuestion01Answers05 surveyQuestion01Answers05 = new SurveyQuestion01Answers05();
+        SurveyQuestion01Answers06 surveyQuestion01Answers06 = new SurveyQuestion01Answers06();
+        SurveyQuestion01Answers07 surveyQuestion01Answers07 = new SurveyQuestion01Answers07();
+        SurveyQuestion01Answers08 surveyQuestion01Answers08 = new SurveyQuestion01Answers08();
+        SurveyQuestion01Answers09 surveyQuestion01Answers09 = new SurveyQuestion01Answers09();
+        SurveyQuestion01Answers10 surveyQuestion01Answers10 = new SurveyQuestion01Answers10();
+
+        SurveyQuestions02 surveyQuestions02 = new SurveyQuestions02();
+        SurveyQuestion02Answers01 SurveyQuestion02Answers01 = new SurveyQuestion02Answers01();
+        SurveyQuestion02Answers02 SurveyQuestion02Answers02 = new SurveyQuestion02Answers02();
+        SurveyQuestion02Answers03 SurveyQuestion02Answers03 = new SurveyQuestion02Answers03();
+        SurveyQuestion02Answers04 SurveyQuestion02Answers04 = new SurveyQuestion02Answers04();
+        SurveyQuestion02Answers05 SurveyQuestion02Answers05 = new SurveyQuestion02Answers05();
+        SurveyQuestion02Answers06 SurveyQuestion02Answers06 = new SurveyQuestion02Answers06();
+        SurveyQuestion02Answers07 SurveyQuestion02Answers07 = new SurveyQuestion02Answers07();
+        SurveyQuestion02Answers08 SurveyQuestion02Answers08 = new SurveyQuestion02Answers08();
+        SurveyQuestion02Answers09 SurveyQuestion02Answers09 = new SurveyQuestion02Answers09();
+        SurveyQuestion02Answers10 SurveyQuestion02Answers10 = new SurveyQuestion02Answers10();
 
 
-        // Add all instantiated just 1 question and 100 answers from database
+        // Note: Add all instantiated just 1 question and 100 answers from database
         surveyQuestionsArrayList.add(surveyQuestions01.questions); // <-- only one!
-        surveyAnswersArrayList.add(surveyAnswers01.surveyAnswers);
-        surveyAnswersArrayList.add(surveyAnswers02.surveyAnswers);
+        surveyAnswersArrayList.add(surveyQuestion01Answers01.surveyAnswers);
+        surveyAnswersArrayList.add(surveyQuestion01Answers02.surveyAnswers);
+        surveyAnswersArrayList.add(surveyQuestion01Answers03.surveyAnswers);
+        surveyAnswersArrayList.add(surveyQuestion01Answers04.surveyAnswers);
+        surveyAnswersArrayList.add(surveyQuestion01Answers05.surveyAnswers);
+        surveyAnswersArrayList.add(surveyQuestion01Answers06.surveyAnswers);
+        surveyAnswersArrayList.add(surveyQuestion01Answers07.surveyAnswers);
+        surveyAnswersArrayList.add(surveyQuestion01Answers08.surveyAnswers);
+        surveyAnswersArrayList.add(surveyQuestion01Answers09.surveyAnswers);
+        surveyAnswersArrayList.add(surveyQuestion01Answers10.surveyAnswers);
 
-        // add all survey responder fo S1 only
+        surveyQuestionsArrayList.add(surveyQuestions01.questions); // <-- only one!
+        surveyAnswersArrayList.add(SurveyQuestion02Answers01.surveyAnswers);
+        surveyAnswersArrayList.add(SurveyQuestion02Answers02.surveyAnswers);
+        surveyAnswersArrayList.add(SurveyQuestion02Answers03.surveyAnswers);
+        surveyAnswersArrayList.add(SurveyQuestion02Answers04.surveyAnswers);
+        surveyAnswersArrayList.add(SurveyQuestion02Answers05.surveyAnswers);
+        surveyAnswersArrayList.add(SurveyQuestion02Answers06.surveyAnswers);
+        surveyAnswersArrayList.add(SurveyQuestion02Answers07.surveyAnswers);
+        surveyAnswersArrayList.add(SurveyQuestion02Answers08.surveyAnswers);
+        surveyAnswersArrayList.add(SurveyQuestion02Answers09.surveyAnswers);
+        surveyAnswersArrayList.add(SurveyQuestion02Answers10.surveyAnswers);
+
+        // Note: add all survey responder fo S1 only
         s1.setSurveyQuestionsArrayList(surveyQuestionsArrayList);
         s1.setSurveyAnswersArrayList(surveyAnswersArrayList);
 
-        // add into TABLE - "LIST"
+        // Note: add into TABLE - "LIST"
         list.add(s1);
 
         // DEBUG - Make sure all only 1 question and 100 answers
-        System.out.println("size S: "+list.size()); // it always 1..10
+        System.out.println("size S: "+list.size()); // it always 1..10 (start from 0)
         for(Survey s:list){
             System.out.println("size S - question: "+s.getSurveyQuestionsArrayList().size()); // it always 1 !
-            System.out.println("size S - answers: "+s.getSurveyAnswersArrayList().size()); // it always more then 1 !
-            //System.out.println(s.getSurveyQuestionsArrayList());
-            //System.out.println(s.getSurveyAnswersArrayList());
+            System.out.println("size S - answers: "+s.getSurveyAnswersArrayList().size()); // more then 1..10
+            //System.out.println(s.getSurveyQuestionsArrayList());  // uncomment to see data
+            //System.out.println(s.getSurveyAnswersArrayList());    // uncomment to see data
         }
     }
 }
