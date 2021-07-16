@@ -103,13 +103,12 @@ public class HashTableRandom {
 
     @Override
     public String toString() {
-        StringBuilder builder = new StringBuilder();
-        builder.append(hashAlgorithm.toString());
-        builder.append(" method with ");
-        builder.append(probingAlgorithm.toString());
-        builder.append(" - Hashtable - ");
-        builder.append(hashArray);
-        return builder.toString();
+        String builder = hashAlgorithm.toString() +
+                " method with " +
+                probingAlgorithm.toString() +
+                " - Hashtable - " +
+                hashArray;
+        return builder;
     }
 
     private int calculateIndex(int hashValue, int key, int j) {
