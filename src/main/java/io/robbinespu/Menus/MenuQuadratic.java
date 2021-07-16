@@ -8,10 +8,10 @@ public class MenuQuadratic {
 
     public static void mainMenu() {
         System.out.println();
-        System.out.println("1.Add a number to hash table");
-        System.out.println("2.Get a number from hash table");
+        System.out.println("1.Loads QUESTIONARE to hash table");
+        System.out.println("2.Open specific QUESTIONARE from hash table (input: index based )");
         System.out.println("3.Search for a number in hash table");
-        System.out.println("4.Delete a number from hash table");
+        System.out.println("4.Delete a QUESTIONARE from hash table");
         System.out.println("5.Clear the hash table");
         System.out.println("6.Sort students by matriculation number");
         System.out.println("0.Exit");
@@ -26,7 +26,7 @@ public class MenuQuadratic {
             choice = Console.readIntFromStdin("Please enter a number for an option: ");
             switch (choice) {
                 case 1:
-                    input = Console.readIntFromStdin("Please enter a number for adding: ");
+                    input = Console.readIntFromStdin("Please enter which QUESTIONARE for adding: ");
                     HashInvokerQuadratic.insert(table,input);
                     break;
                 case 2:
@@ -38,7 +38,7 @@ public class MenuQuadratic {
                     HashInvokerQuadratic.search(table, input);
                     break;
                 case 4:
-                    input = Console.readIntFromStdin("Please enter a number for deleting: ");
+                    input = Console.readIntFromStdin("Please enter a QUESTIONARE number for deleting: ");
                     HashInvokerQuadratic.remove(table, input);
                     break;
                 case 5:
