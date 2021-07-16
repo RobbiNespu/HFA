@@ -1,7 +1,7 @@
 package io.robbinespu.tables;
 
-import io.robbinespu.database.SurveyAnswers01;
-import io.robbinespu.database.SurveyAnswers02;
+import io.robbinespu.database.SurveyQuestion01Answers01;
+import io.robbinespu.database.SurveyQuestion01Answers02;
 import io.robbinespu.database.SurveyQuestions01;
 import io.robbinespu.datastructure.Survey;
 import io.robbinespu.datastructure.SurveyAnswers;
@@ -29,22 +29,22 @@ public class CustomList {
         ArrayList<SurveyQuestions> surveyQuestionsArrayList = new ArrayList<>();
         ArrayList<SurveyAnswers> surveyAnswersArrayList = new ArrayList<>();
 
-        // Create just 1 question and 100 answers inside DATABASE
+        // Note: Create just 1 question and 100 answers inside DATABASE
         SurveyQuestions01 surveyQuestions01 = new SurveyQuestions01();
-        SurveyAnswers01 surveyAnswers01 = new SurveyAnswers01();
-        SurveyAnswers02 surveyAnswers02 = new SurveyAnswers02();
+        SurveyQuestion01Answers01 surveyQuestion01Answers01 = new SurveyQuestion01Answers01();
+        SurveyQuestion01Answers02 surveyQuestion01Answers02 = new SurveyQuestion01Answers02();
 
 
-        // Add all instantiated just 1 question and 100 answers from database
+        // Note: Add all instantiated just 1 question and 100 answers from database
         surveyQuestionsArrayList.add(surveyQuestions01.questions); // <-- only one!
-        surveyAnswersArrayList.add(surveyAnswers01.surveyAnswers);
-        surveyAnswersArrayList.add(surveyAnswers02.surveyAnswers);
+        surveyAnswersArrayList.add(surveyQuestion01Answers01.surveyAnswers);
+        surveyAnswersArrayList.add(surveyQuestion01Answers02.surveyAnswers);
 
-        // add all survey responder fo S1 only
+        // Note: add all survey responder fo S1 only
         s1.setSurveyQuestionsArrayList(surveyQuestionsArrayList);
         s1.setSurveyAnswersArrayList(surveyAnswersArrayList);
 
-        // add into TABLE - "LIST"
+        // Note: add into TABLE - "LIST"
         list.add(s1);
 
         // DEBUG - Make sure all only 1 question and 100 answers
@@ -52,8 +52,8 @@ public class CustomList {
         for(Survey s:list){
             System.out.println("size S - question: "+s.getSurveyQuestionsArrayList().size()); // it always 1 !
             System.out.println("size S - answers: "+s.getSurveyAnswersArrayList().size()); // it always more then 1 !
-            //System.out.println(s.getSurveyQuestionsArrayList());
-            //System.out.println(s.getSurveyAnswersArrayList());
+            //System.out.println(s.getSurveyQuestionsArrayList());  // uncomment to see data
+            //System.out.println(s.getSurveyAnswersArrayList());    // uncomment to see data
         }
     }
 }
