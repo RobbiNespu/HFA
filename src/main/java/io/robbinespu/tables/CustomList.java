@@ -1,9 +1,7 @@
 package io.robbinespu.tables;
 
 import io.robbinespu.database.q01.*;
-import io.robbinespu.database.q01.r01.*;
-import io.robbinespu.database.q02.SurveyQuestions02;
-import io.robbinespu.database.q02.r01.*;
+import io.robbinespu.database.q02.*;
 import io.robbinespu.database.q03.SurveyQuestions03;
 import io.robbinespu.database.q04.SurveyQuestions04;
 import io.robbinespu.database.q05.SurveyQuestions05;
@@ -184,10 +182,12 @@ public class CustomList {
         // DEBUG - Make sure all only 1 question and 100 answers
         System.out.println("size S: "+list.size()); // it always 1..10 (start from 0)
         for(Survey s:list){
-            System.out.println("size S - question: "+s.getSurveyQuestionsArrayList().size()); // it always 1 !
-            System.out.println("size S - answers: "+s.getSurveyAnswersArrayList().size()); // more then 1..10
+            System.out.println("--------------------");
+            System.out.println("size S ["+ list.indexOf(s) + "] - question: "+s.getSurveyQuestionsArrayList().size()); // it always 1 !
+            System.out.println("size S ["+ list.indexOf(s) + "] - answers: "+s.getSurveyAnswersArrayList().size()); // more then 1..10
             //System.out.println(s.getSurveyQuestionsArrayList());  // uncomment to see data
             //System.out.println(s.getSurveyAnswersArrayList());    // uncomment to see data
+            System.out.println("--------------------");
         }
     }
 }
