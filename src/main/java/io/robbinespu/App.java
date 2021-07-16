@@ -1,12 +1,8 @@
 package io.robbinespu;
 
-import io.robbinespu.database.*;
-import io.robbinespu.datastructure.*;
 import io.robbinespu.hashing.QuadraticProbing;
 import io.robbinespu.hashing.TableFullException;
 import io.robbinespu.tables.CustomList;
-
-import java.util.*;
 
 /**
  * Hello world!
