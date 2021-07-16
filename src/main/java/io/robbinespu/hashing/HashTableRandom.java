@@ -77,8 +77,7 @@ public class HashTableRandom {
         if (hashArray.compareKeys(addr, key)) {
             hashArray.markAsDeleted(addr);
             debug(String.format(sMsgKeyMarkedAsDeleted, key, addr));
-        }
-        if (hashArray.compareKeys(addr, key)) {
+        }else{
             throw new Exception(String.format(sExceptionKeyNotFound, key));
         }
     }

@@ -11,10 +11,9 @@ public class MenuRandom {
         System.out.println();
         System.out.println("1.Loads QUESTIONARE to hash table");
         System.out.println("2.Open specific QUESTIONARE from hash table (input: index based )");
-        System.out.println("3.Search for a number in hash table (Binary search)");
+        System.out.println("3.Search for a QUESTIONARE number in hash table");
         System.out.println("4.Delete a QUESTIONARE from hash table");
-        System.out.println("5.Clear the hash table");
-        System.out.println("6.Sort students by matriculation number");
+        System.out.println("5.Clear all QUESTIONARE on the hash table");
         System.out.println("0.Exit");
         System.out.println();
     }
@@ -31,11 +30,11 @@ public class MenuRandom {
                     HashInvokerRandom.insert(table,input);
                     break;
                 case 2:
-                    input = Console.readIntFromStdin("Please enter an index:");
+                    input = Console.readIntFromStdin("Please enter an HASH index:");
                     HashInvokerRandom.getValue(table, input);
                     break;
                 case 3:
-                    input = Console.readIntFromStdin("Please enter a number for searching: ");
+                    input = Console.readIntFromStdin("Please enter a QUESTIONARE number for searching: ");
                     HashInvokerRandom.search(table, input);
                     break;
                 case 4:
