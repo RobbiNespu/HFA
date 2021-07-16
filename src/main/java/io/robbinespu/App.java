@@ -1,6 +1,6 @@
 package io.robbinespu;
 
-import io.robbinespu.hashing.QuadraticProbing;
+import io.robbinespu.hashing.TempQuadraticProbing;
 import io.robbinespu.hashing.TableFullException;
 import io.robbinespu.tables.CustomList;
 
@@ -37,7 +37,7 @@ public class App {
         CustomList customList = new CustomList();
 
         // Quadratic
-        QuadraticProbing hashQuadratic = new QuadraticProbing(Constants.TABLE_SZ);
+        TempQuadraticProbing hashQuadratic = new TempQuadraticProbing(Constants.TABLE_SZ);
 
         hashQuadratic.insert(0, Constants.TABLE_SZ);
         hashQuadratic.insert(1, Constants.TABLE_SZ);

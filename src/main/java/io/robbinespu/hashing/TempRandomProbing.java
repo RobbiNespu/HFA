@@ -1,4 +1,4 @@
 package io.robbinespu.hashing;
 
-public class RandomProbing {
+public class TempRandomProbing {
 }
