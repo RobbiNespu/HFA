@@ -1,5 +1,7 @@
 package io.robbinespu.hashing;
 
+import io.robbinespu.App;
+import io.robbinespu.tables.CustomList;
 import io.robbinespu.tables.HashArray;
 
 public class HashInvokerQuadratic {
@@ -10,6 +12,8 @@ public class HashInvokerQuadratic {
     private static final String sMsgIsCleared = "The hash table is cleared";
     private static final String sMsgIndexIsOutOfBounds = "Index is out of Bounds";
     private static final String sMsgNoElement = "There is no element at this index";
+
+    private static final CustomList customList = new CustomList();
 
     static public void insert(HashTableQuadratic table, int key) {
         if(!checkInputQuestionare(key)){
@@ -53,8 +57,13 @@ public class HashInvokerQuadratic {
             print(sMsgIndexIsOutOfBounds);
         } else if (array.isFree(idx) || array.isMarkedAsDeleted(idx)) {
             print(sMsgNoElement);
-        } else
+        } else {
             print(String.format(sMsgGetKeyFound, array.get(idx)));
+            print("\n---------------------------");
+            print(String.valueOf(customList.s1.getSurveyQuestionsArrayList()));
+            print(String.valueOf(customList.s1.getSurveyAnswersArrayList().toString()));
+            print("\n---------------------------");
+        }
     }
 
     static public void clear(HashTableQuadratic table) {

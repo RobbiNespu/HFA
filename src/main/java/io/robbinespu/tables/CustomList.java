@@ -20,18 +20,18 @@ import java.util.LinkedList;
 import java.util.List;
 
 public class CustomList {
-    List<Survey> list = new LinkedList<>();
+    public List<Survey> list = new LinkedList<>();
 
-    Survey s1 = new Survey();
-    Survey s2 = new Survey();
-    Survey s3 = new Survey();
-    Survey s4 = new Survey();
-    Survey s5 = new Survey();
-    Survey s6 = new Survey();
-    Survey s7 = new Survey();
-    Survey s8 = new Survey();
-    Survey s9 = new Survey();
-    Survey s10 = new Survey();
+    public Survey s1 = new Survey();
+    public Survey s2 = new Survey();
+    public Survey s3 = new Survey();
+    public Survey s4 = new Survey();
+    public Survey s5 = new Survey();
+    public Survey s6 = new Survey();
+    public Survey s7 = new Survey();
+    public Survey s8 = new Survey();
+    public Survey s9 = new Survey();
+    public Survey s10 = new Survey();
 
     // Note: Create just 1 question and 100 answers inside DATABASE
     SurveyQuestions01 surveyQuestions01 = new SurveyQuestions01();
@@ -106,8 +106,8 @@ public class CustomList {
     ArrayList<SurveyAnswers> surveyAnswersArrayList10 = new ArrayList<>();
 
 
-
     public CustomList() {
+
         surveyQuestionsArrayList01.add(surveyQuestions01.questions); // <-- only one!
         surveyAnswersArrayList01.add(surveyQuestion01Answers01.surveyAnswers);
         surveyAnswersArrayList01.add(surveyQuestion01Answers02.surveyAnswers);
@@ -191,46 +191,46 @@ public class CustomList {
         list.add(s9);
         list.add(s10);
 
-        debug_size();
+        //debug_size();
         //debug_hash();
 
     }
 
-    private void debug_hash() {
-//        System.out.println("list : "+list.hashCode());
-//        System.out.println("survey s1 : "+s1.hashCode());
-//        System.out.println("survey s2 : "+s2.hashCode());
-//        System.out.println("survey s3 : "+s3.hashCode());
-//        System.out.println("survey s4 : "+s4.hashCode());
-//        System.out.println("survey s5 : "+s5.hashCode());
-//        System.out.println("survey s6 : "+s6.hashCode());
-//        System.out.println("survey s7 : "+s7.hashCode());
-//        System.out.println("survey s8 : "+s8.hashCode());
-//        System.out.println("survey s9 : "+s9.hashCode());
-//        System.out.println("survey s10: "+s10.hashCode());
-
-        //System.out.println("survey s10: "+surveyQuestion01Answers01.hashCode());
-
+//    private void debug_hash() {
+////        System.out.println("list : "+list.hashCode());
+////        System.out.println("survey s1 : "+s1.hashCode());
+////        System.out.println("survey s2 : "+s2.hashCode());
+////        System.out.println("survey s3 : "+s3.hashCode());
+////        System.out.println("survey s4 : "+s4.hashCode());
+////        System.out.println("survey s5 : "+s5.hashCode());
+////        System.out.println("survey s6 : "+s6.hashCode());
+////        System.out.println("survey s7 : "+s7.hashCode());
+////        System.out.println("survey s8 : "+s8.hashCode());
+////        System.out.println("survey s9 : "+s9.hashCode());
+////        System.out.println("survey s10: "+s10.hashCode());
+//
+//        //System.out.println("survey s10: "+surveyQuestion01Answers01.hashCode());
+//
+////        for(Survey s:list){
+////            //System.out.println("--------------------");
+////            System.out.println("list (SurveyQuestionsArrayList) : "+s.getSurveyQuestionsArrayList().hashCode());
+////            System.out.println("list (SurveyAnswersArrayList) : "+s.getSurveyAnswersArrayList().hashCode());  // {posibble duplicate
+////            //System.out.println("list (SurveyAnswersArrayList) : "+ Arrays.toString(s.getSurveyAnswersArrayList().toArray()));  // {posibble duplicate
+////            System.out.println("--------------------");
+////        }
+//    }
+//
+//    public void debug_size(){
+//        // DEBUG - Make sure all only 1 question and 100 answers
+//        System.out.println("size S: "+list.size()); // it always 1..10 (start from 0)
 //        for(Survey s:list){
-//            //System.out.println("--------------------");
-//            System.out.println("list (SurveyQuestionsArrayList) : "+s.getSurveyQuestionsArrayList().hashCode());
-//            System.out.println("list (SurveyAnswersArrayList) : "+s.getSurveyAnswersArrayList().hashCode());  // {posibble duplicate
-//            //System.out.println("list (SurveyAnswersArrayList) : "+ Arrays.toString(s.getSurveyAnswersArrayList().toArray()));  // {posibble duplicate
+//            System.out.println("size S ["+ list.indexOf(s) + "] - question: "+s.getSurveyQuestionsArrayList().size()); // it always 1 !
+//            System.out.println("size S ["+ list.indexOf(s) + "] - answers: "+s.getSurveyAnswersArrayList().size()); // more then 1..10
+//            if(s.getSurveyQuestionsArrayList().size() > 0 && s.getSurveyAnswersArrayList().size() > 0){
+//                System.out.println(s.getSurveyQuestionsArrayList());  // uncomment to see data
+//                System.out.println(s.getSurveyAnswersArrayList());    // uncomment to see data
+//            }
 //            System.out.println("--------------------");
 //        }
-    }
-
-    public void debug_size(){
-        // DEBUG - Make sure all only 1 question and 100 answers
-        System.out.println("size S: "+list.size()); // it always 1..10 (start from 0)
-        for(Survey s:list){
-            System.out.println("size S ["+ list.indexOf(s) + "] - question: "+s.getSurveyQuestionsArrayList().size()); // it always 1 !
-            System.out.println("size S ["+ list.indexOf(s) + "] - answers: "+s.getSurveyAnswersArrayList().size()); // more then 1..10
-            if(s.getSurveyQuestionsArrayList().size() > 0 && s.getSurveyAnswersArrayList().size() > 0){
-                System.out.println(s.getSurveyQuestionsArrayList());  // uncomment to see data
-                System.out.println(s.getSurveyAnswersArrayList());    // uncomment to see data
-            }
-            System.out.println("--------------------");
-        }
-    }
+//    }
 }

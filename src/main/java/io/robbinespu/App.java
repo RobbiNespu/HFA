@@ -10,11 +10,9 @@ import io.robbinespu.tables.CustomList;
  *
  */
 public class App {
-
     public static void main( String[] args ) throws TableFullException {
         //System.out.println( "Hello World!" );
         System.out.println();
         Menus.apps();
-        //CustomList customList = new CustomList();
-        }
+    }
 }
