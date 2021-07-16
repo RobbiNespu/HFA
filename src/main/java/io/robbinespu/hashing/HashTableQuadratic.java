@@ -42,12 +42,16 @@ public class HashTableQuadratic {
     void insert(int key) throws Exception {
         int j = 0;
         int hashValue = hashAlgorithm.hash(key);
+        System.out.println("DEBUG: hash value = "+hashValue);
         do {
-            int addr = calculateIndex(hashValue, key, j);
+            int addr = calculateIndex(hashValue, key, j); // Quadratic happen here on J value!
+            System.out.println("DEBUG: addr value = "+addr);
             if (hashArray.isFree(addr) || hashArray.isMarkedAsDeleted(addr)) {
                 hashArray.set(addr, key);
                 debug(String.format(sMsgKeyInsertAt, key, addr));
                 return;
+            }else{
+                System.out.println("Index: " + addr + " is already occupied. Trying next empty cell...");
             }
             j++;
         } while (j < size);
