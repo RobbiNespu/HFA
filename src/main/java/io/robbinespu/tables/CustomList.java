@@ -191,8 +191,8 @@ public class CustomList {
         list.add(s9);
         list.add(s10);
 
-        //debug_size();
-        debug_hash();
+        debug_size();
+        //debug_hash();
 
     }
 
@@ -209,7 +209,7 @@ public class CustomList {
 //        System.out.println("survey s9 : "+s9.hashCode());
 //        System.out.println("survey s10: "+s10.hashCode());
 
-        System.out.println("survey s10: "+surveyQuestion01Answers01.hashCode());
+        //System.out.println("survey s10: "+surveyQuestion01Answers01.hashCode());
 
 //        for(Survey s:list){
 //            //System.out.println("--------------------");
@@ -224,11 +224,12 @@ public class CustomList {
         // DEBUG - Make sure all only 1 question and 100 answers
         System.out.println("size S: "+list.size()); // it always 1..10 (start from 0)
         for(Survey s:list){
-            System.out.println("--------------------");
             System.out.println("size S ["+ list.indexOf(s) + "] - question: "+s.getSurveyQuestionsArrayList().size()); // it always 1 !
             System.out.println("size S ["+ list.indexOf(s) + "] - answers: "+s.getSurveyAnswersArrayList().size()); // more then 1..10
-            //System.out.println(s.getSurveyQuestionsArrayList());  // uncomment to see data
-            //System.out.println(s.getSurveyAnswersArrayList());    // uncomment to see data
+            if(s.getSurveyQuestionsArrayList().size() > 0 && s.getSurveyAnswersArrayList().size() > 0){
+                System.out.println(s.getSurveyQuestionsArrayList());  // uncomment to see data
+                System.out.println(s.getSurveyAnswersArrayList());    // uncomment to see data
+            }
             System.out.println("--------------------");
         }
     }

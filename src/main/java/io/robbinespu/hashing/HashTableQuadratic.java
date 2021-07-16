@@ -114,7 +114,7 @@ public class HashTableQuadratic {
         return customMath.FloorMod(x,y);
     }
 
-    private boolean debug = false;
+    private boolean debug = true;
 
     void debug(String s) {
         if (debug) {
