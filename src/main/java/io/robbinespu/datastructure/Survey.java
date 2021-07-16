@@ -1,33 +1,33 @@
 package io.robbinespu.datastructure;
 
-import java.util.Iterator;
-import java.util.LinkedHashMap;
-import java.util.Map;
-import java.util.Set;
+import java.util.*;
 
 public class Survey {
-    LinkedHashMap<SurveyQuestions, SurveyAnswers> surveyQuestionsSurveyAnswersLinkedHashMap;
+    ArrayList<SurveyQuestions> surveyQuestionsArrayList;
+    ArrayList<SurveyAnswers> surveyAnswersArrayList;
+
+    public Survey(ArrayList<SurveyQuestions> surveyQuestionsArrayList, ArrayList<SurveyAnswers> surveyAnswersArrayList) {
+        this.surveyQuestionsArrayList = surveyQuestionsArrayList;
+        this.surveyAnswersArrayList = surveyAnswersArrayList;
+    }
 
     public Survey() {
 
     }
 
-    public LinkedHashMap<SurveyQuestions, SurveyAnswers> getSurveyQuestionsSurveyAnswersLinkedHashMap() {
-        return surveyQuestionsSurveyAnswersLinkedHashMap;
-    }
-    @Override
-    public String toString() {
-        return "\nSurvey {"+
-                "\nsize["+getSurveyQuestionsSurveyAnswersLinkedHashMap().size()+"]"+
-                "\nLinkedHashMap"+surveyQuestionsSurveyAnswersLinkedHashMap+
-                "\n}";
+    public ArrayList<SurveyQuestions> getSurveyQuestionsArrayList() {
+        return surveyQuestionsArrayList;
     }
 
-    public void setSurveyQuestionsSurveyAnswersLinkedHashMap(LinkedHashMap<SurveyQuestions, SurveyAnswers> surveyQuestionsSurveyAnswersLinkedHashMap) {
-        this.surveyQuestionsSurveyAnswersLinkedHashMap = surveyQuestionsSurveyAnswersLinkedHashMap;
+    public void setSurveyQuestionsArrayList(ArrayList<SurveyQuestions> surveyQuestionsArrayList) {
+        this.surveyQuestionsArrayList = surveyQuestionsArrayList;
     }
 
-    public Survey(LinkedHashMap<SurveyQuestions, SurveyAnswers> surveyQuestionsSurveyAnswersLinkedHashMap ) {
-        this.surveyQuestionsSurveyAnswersLinkedHashMap = surveyQuestionsSurveyAnswersLinkedHashMap;
+    public ArrayList<SurveyAnswers> getSurveyAnswersArrayList() {
+        return surveyAnswersArrayList;
+    }
+
+    public void setSurveyAnswersArrayList(ArrayList<SurveyAnswers> surveyAnswersArrayList) {
+        this.surveyAnswersArrayList = surveyAnswersArrayList;
     }
 }
