@@ -53,4 +53,27 @@ public class SurveyQuestions {
                 "\n QuestionOptions="+ Arrays.toString(getSurveyQuestionsOptions())+
                 "\n}";
     }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        SurveyQuestions that = (SurveyQuestions) o;
+
+        if (questionType != that.questionType) return false;
+        if (questionString != null ? !questionString.equals(that.questionString) : that.questionString != null)
+            return false;
+        // Probably incorrect - comparing Object[] arrays with Arrays.equals
+        return Arrays.equals(surveyQuestionsOptions, that.surveyQuestionsOptions);
+    }
+
+    @Override
+    public int hashCode() {
+        int result = questionString != null ? questionString.hashCode() : 0;
+        result = result+ questionType;
+        result = 31 * result + Arrays.hashCode(surveyQuestionsOptions);
+        return result;
+        // (answers.hashCode())% Constants.TABLE_SZ;
+    }
 }

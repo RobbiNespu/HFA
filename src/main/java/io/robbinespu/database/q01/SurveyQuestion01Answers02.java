@@ -1,4 +1,4 @@
-package io.robbinespu.database.q01.r01;
+package io.robbinespu.database.q01;
 
 import io.robbinespu.datastructure.SurveyAnswers;
 

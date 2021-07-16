@@ -30,4 +30,19 @@ public class Survey {
     public void setSurveyAnswersArrayList(ArrayList<SurveyAnswers> surveyAnswersArrayList) {
         this.surveyAnswersArrayList = surveyAnswersArrayList;
     }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Survey survey = (Survey) o;
+        return Objects.equals(surveyQuestionsArrayList, survey.surveyQuestionsArrayList) && Objects.equals(surveyAnswersArrayList, survey.surveyAnswersArrayList);
+    }
+
+    @Override
+    public int hashCode() {
+        int result = surveyQuestionsArrayList != null ? surveyQuestionsArrayList.hashCode() : 0;
+        result = 31 * result + (surveyAnswersArrayList != null ? surveyAnswersArrayList.hashCode() : 0);
+        return result;
+    }
 }
