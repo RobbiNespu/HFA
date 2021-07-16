@@ -2,6 +2,8 @@ package io.robbinespu.tables;
 
 import io.robbinespu.database.q01.*;
 import io.robbinespu.database.q01.r01.*;
+import io.robbinespu.database.q02.SurveyQuestions02;
+import io.robbinespu.database.q02.r01.*;
 import io.robbinespu.datastructure.Survey;
 import io.robbinespu.datastructure.SurveyAnswers;
 import io.robbinespu.datastructure.SurveyQuestions;
@@ -41,6 +43,17 @@ public class CustomList {
         SurveyQuestion01Answers09 surveyQuestion01Answers09 = new SurveyQuestion01Answers09();
         SurveyQuestion01Answers10 surveyQuestion01Answers10 = new SurveyQuestion01Answers10();
 
+        SurveyQuestions02 surveyQuestions02 = new SurveyQuestions02();
+        SurveyQuestion02Answers01 SurveyQuestion02Answers01 = new SurveyQuestion02Answers01();
+        SurveyQuestion02Answers02 SurveyQuestion02Answers02 = new SurveyQuestion02Answers02();
+        SurveyQuestion02Answers03 SurveyQuestion02Answers03 = new SurveyQuestion02Answers03();
+        SurveyQuestion02Answers04 SurveyQuestion02Answers04 = new SurveyQuestion02Answers04();
+        SurveyQuestion02Answers05 SurveyQuestion02Answers05 = new SurveyQuestion02Answers05();
+        SurveyQuestion02Answers06 SurveyQuestion02Answers06 = new SurveyQuestion02Answers06();
+        SurveyQuestion02Answers07 SurveyQuestion02Answers07 = new SurveyQuestion02Answers07();
+        SurveyQuestion02Answers08 SurveyQuestion02Answers08 = new SurveyQuestion02Answers08();
+        SurveyQuestion02Answers09 SurveyQuestion02Answers09 = new SurveyQuestion02Answers09();
+        SurveyQuestion02Answers10 SurveyQuestion02Answers10 = new SurveyQuestion02Answers10();
 
 
         // Note: Add all instantiated just 1 question and 100 answers from database
@@ -51,9 +64,22 @@ public class CustomList {
         surveyAnswersArrayList.add(surveyQuestion01Answers04.surveyAnswers);
         surveyAnswersArrayList.add(surveyQuestion01Answers05.surveyAnswers);
         surveyAnswersArrayList.add(surveyQuestion01Answers06.surveyAnswers);
+        surveyAnswersArrayList.add(surveyQuestion01Answers07.surveyAnswers);
         surveyAnswersArrayList.add(surveyQuestion01Answers08.surveyAnswers);
         surveyAnswersArrayList.add(surveyQuestion01Answers09.surveyAnswers);
         surveyAnswersArrayList.add(surveyQuestion01Answers10.surveyAnswers);
+
+        surveyQuestionsArrayList.add(surveyQuestions01.questions); // <-- only one!
+        surveyAnswersArrayList.add(SurveyQuestion02Answers01.surveyAnswers);
+        surveyAnswersArrayList.add(SurveyQuestion02Answers02.surveyAnswers);
+        surveyAnswersArrayList.add(SurveyQuestion02Answers03.surveyAnswers);
+        surveyAnswersArrayList.add(SurveyQuestion02Answers04.surveyAnswers);
+        surveyAnswersArrayList.add(SurveyQuestion02Answers05.surveyAnswers);
+        surveyAnswersArrayList.add(SurveyQuestion02Answers06.surveyAnswers);
+        surveyAnswersArrayList.add(SurveyQuestion02Answers07.surveyAnswers);
+        surveyAnswersArrayList.add(SurveyQuestion02Answers08.surveyAnswers);
+        surveyAnswersArrayList.add(SurveyQuestion02Answers09.surveyAnswers);
+        surveyAnswersArrayList.add(SurveyQuestion02Answers10.surveyAnswers);
 
         // Note: add all survey responder fo S1 only
         s1.setSurveyQuestionsArrayList(surveyQuestionsArrayList);
