@@ -2,7 +2,7 @@ package io.robbinespu.database;
 
 import io.robbinespu.datastructure.TempRespondentOptions;
 
-public class Question01_R001 {
+public class Question01_R004 {
     TempRespondentOptions tempRespondentOptions = new TempRespondentOptions();
 
     public TempRespondentOptions getRespondentOptions() {
@@ -13,8 +13,8 @@ public class Question01_R001 {
         this.tempRespondentOptions = tempRespondentOptions;
     }
 
-    public Question01_R001() {
+    public Question01_R004() {
         // Add respondent
-        tempRespondentOptions.setText("C"); //<------------ responded answers
+        tempRespondentOptions.setText("A"); //<------------ responded answers
     }
 }

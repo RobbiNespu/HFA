@@ -1,21 +1,21 @@
 package io.robbinespu.database;
 
 import io.robbinespu.Constants;
-import io.robbinespu.datastructure.Questionare;
-import io.robbinespu.datastructure.QuestionareOptions;
+import io.robbinespu.datastructure.SurveyQuestions;
+import io.robbinespu.datastructure.TempSurveyQuestionsOptions;
 
 import java.util.LinkedHashMap;
 
-public class Question01 {
+public class Question01 extends SurveyQuestions {
 
-    Questionare question = new Questionare();
+    SurveyQuestions question = new SurveyQuestions();
     LinkedHashMap<String,String> questionOptionTypeMCQ = new LinkedHashMap<>();
 
-    public Questionare getQuestion() {
+    public SurveyQuestions getQuestion() {
         return question;
     }
 
-    public void setQuestion(Questionare question) {
+    public void setQuestion(SurveyQuestions question) {
         this.question = question;
     }
 
@@ -32,7 +32,7 @@ public class Question01 {
     public Question01() {
 
         question.setQuestionString("What is your age?");
-        question.setQuestionType(Constants.SINGLE_CHOOSE_QUESTION);
+        question.setQuestionType(Constants.ANSWER_SINGLE);
 
         questionOptionTypeMCQ.put("A","Under 18");
         questionOptionTypeMCQ.put("B","18 - 24 years");
@@ -45,8 +45,8 @@ public class Question01 {
         questionOptionTypeMCQ.put("I","55 - 59 years");
         questionOptionTypeMCQ.put("J","60 years and above");
 
-        QuestionareOptions qo1 = new QuestionareOptions(questionOptionTypeMCQ);
-        question.setQuestionareOptions(qo1);
+        TempSurveyQuestionsOptions qo1 = new TempSurveyQuestionsOptions(questionOptionTypeMCQ);
+        //question.setQuestionareOptions(qo1);
 
     }
 }

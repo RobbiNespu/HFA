@@ -1,14 +1,14 @@
 package io.robbinespu.datastructure;
 
-public class RespondentOptions {
+public class TempRespondentOptions {
     private String id;// A B C
     private String text;
 
-    public RespondentOptions(String text) {
+    public TempRespondentOptions(String text) {
         this.text = text;
     }
 
-    public RespondentOptions() {
+    public TempRespondentOptions() {
 
     }
 
@@ -30,8 +30,8 @@ public class RespondentOptions {
 
     @Override
     public String toString() {
-        return "\n RespondentOptions{ " +
-                "\n  text=" + getText() +
+        return "\nRespondentOptions{ " +
+                "\n text=" + getText() +
                 "\n}";
     }
 }

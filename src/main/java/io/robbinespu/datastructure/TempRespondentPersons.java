@@ -5,12 +5,12 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.Iterator;
 
-public class Respondent {
+public class TempRespondentPersons {
     String timeStamp = new SimpleDateFormat("yyyy.MM.dd.HH.mm.ss").format(new Date());
-    ArrayList<Questionare> questions = new ArrayList<>();
-    ArrayList<RespondentOptions> respondentOptions = new ArrayList<>();
+    ArrayList<SurveyQuestions> questions = new ArrayList<>();
+    ArrayList<TempRespondentOptions> tempRespondentOptions = new ArrayList<>();
 
-    public Respondent() {
+    public TempRespondentPersons() {
 
     }
 
@@ -22,35 +22,35 @@ public class Respondent {
         this.timeStamp = timeStamp;
     }
 
-    public void setQuestions(ArrayList<Questionare> questions) {
+    public void setQuestions(ArrayList<SurveyQuestions> questions) {
         this.questions = questions;
     }
 
-    public void setRespondentOptions(ArrayList<RespondentOptions> respondentOptions) {
-        this.respondentOptions = respondentOptions;
+    public void setRespondentOptions(ArrayList<TempRespondentOptions> tempRespondentOptions) {
+        this.tempRespondentOptions = tempRespondentOptions;
     }
 
-    public ArrayList<Questionare> getQuestions() {
+    public ArrayList<SurveyQuestions> getQuestions() {
         return questions;
     }
 
     public String getRespondentOptions() {
         //return respondentOptions;
         //Getting Iterator
-        Iterator itr=respondentOptions.iterator();
+        Iterator itr= tempRespondentOptions.iterator();
         //traversing elements of ArrayList object
         while(itr.hasNext()){
-            RespondentOptions st=(RespondentOptions)itr.next();
+            TempRespondentOptions st=(TempRespondentOptions)itr.next();
             //System.out.println(st.getText());
             return st.getText();
         }
         return null;
     }
 
-    public Respondent(String timeStamp, ArrayList<Questionare> questions, ArrayList<RespondentOptions> respondentOptions) {
+    public TempRespondentPersons(String timeStamp, ArrayList<SurveyQuestions> questions, ArrayList<TempRespondentOptions> tempRespondentOptions) {
         this.timeStamp = timeStamp;
         this.questions = questions;
-        this.respondentOptions = respondentOptions;
+        this.tempRespondentOptions = tempRespondentOptions;
     }
 
     @Override
@@ -59,7 +59,7 @@ public class Respondent {
                 "\nRespondent{ " +
                 "\ntimeStamp=" + getTimeStamp() +
                 ",\n question="+getQuestions() +
-                ",\n " + respondentOptions.toString() +
+                ",\n " + tempRespondentOptions.toString() +
                 "\n}";
     }
 }
